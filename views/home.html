@@ -1,0 +1,41 @@
+<ons-navigator title="Navigator" var="myNavigator">      
+    <ons-page id="home-page">
+        <ons-toolbar>
+            <div class="left"></div>
+            <div class="center">WELCOME</div>
+            <div class="right">
+                <ons-toolbar-button ng-click="menu.toggleMenu()">
+                    <ons-icon icon="ion-navicon" size="38px" fixed-width="false"></ons-icon>
+                </ons-toolbar-button>
+            </div>
+        </ons-toolbar>
+        <div class="topBanner" style="text-align: center;">
+            <img src="images/app_header.png" class="homePageBanImg" />
+        </div>
+        
+        <div style="padding: 0 20px;">
+            <div class="login-form" ng-init="init()">
+                <h1 style="text-align: center; color: #fff; text-shadow: 0px 0px 5px #000;">Welcome to AgriBonus</h1>
+                <h1 style="text-align: center; color: #fff; text-shadow: 0px 0px 5px #000;font-size: 50px;"><ons-icon icon="spinner" spin="true"></ons-icon></h1>
+                <h4 style="text-align: center; color: #fff; text-shadow: 0px 0px 5px #000;">Loading...</h4>
+                <!--
+                <input type="text" class="text-input--underbar width-full" ng-model="data.loyaltyNum" placeholder="Type in Membership Number here" value="">
+                <input type="password" class="text-input--underbar width-full" ng-model="data.password" placeholder="Type in Password here" value="">
+                <br><br>
+                <ons-button modifier="large" class="login-button" ng-click="LogIn()"><img src="images/icons/unlock.png"/> Log In</ons-button>
+                <br>
+                <ons-button modifier="large" class="reg-button" ng-click="myNavigator.pushPage('views/register.html', { animation : 'slide' } )"><img src="images/icons/new_user.png"/> Register</ons-button>
+                -->
+            </div>
+            <!--
+            <ul class="list">
+                <li class="list__item list__item--chevron" onclick="myNavigator.pushPage('views/register.html', { animation : 'slide' } )">Quick Registration</li>
+                <li class="list__item list__item--chevron" ng-click="checkLogin()">Login / My Card</li>
+                <li class="list__item list__item--chevron" onclick="myNavigator.pushPage('views/works.html', { animation : 'slide' } )">How it works</li>
+                <li class="list__item list__item--chevron" ng-click="getCatList();">Locate a partner</li>
+                <li class="list__item list__item--chevron" onclick="myNavigator.pushPage('views/contact.html', { animation : 'slide' } )">Contact us</li>
+            </ul>
+            -->
+        </div>
+    </ons-page>
+</ons-navigator>

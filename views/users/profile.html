@@ -1,0 +1,63 @@
+<ons-page>
+    <ons-toolbar>
+        <div class="left"><ons-back-button>Back</ons-back-button></div>
+        <div class="center">My Profile</div>
+        <div class="right">
+            <ons-toolbar-button ng-click="menu.toggleMenu()">
+                <ons-icon icon="ion-navicon" size="38px" fixed-width="false"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+    <div class="topBanner" style="text-align: center;">
+        <img src="images/app_header.png" class="otherPageBanImg" />
+    </div>
+    <div class="page_display_text" style="padding: 10px;">
+        <ons-row align="bottom" style="padding: 5px 0px;">
+            <ons-col><strong>First Name:</strong></ons-col><ons-col>{{FirstName}}</ons-col>
+        </ons-row>
+        <ons-row align="bottom" style="padding: 5px 0px;">
+            <ons-col><strong>Last Name:</strong></ons-col><ons-col>{{LastName}}</ons-col>
+        </ons-row>
+        <ons-row align="bottom" style="padding: 5px 0px;">
+            <ons-col><strong>Gender:</strong></ons-col><ons-col>{{gender}}</ons-col>
+        </ons-row>
+        <ons-row align="bottom" style="padding: 5px 0px;">
+            <ons-col><strong>Birth Date:</strong></ons-col><ons-col>{{dob}}</ons-col>
+        </ons-row>
+        <ons-row align="bottom" style="padding: 5px 0px;">
+            <ons-col><strong>Id Number:</strong></ons-col><ons-col>{{IdNumber}}</ons-col>
+        </ons-row>
+        <ons-row align="bottom" style="padding: 5px 0px;">
+            <ons-col><strong>Email Address:</strong></ons-col><ons-col>{{EmailAddress}}</ons-col>
+        </ons-row>
+        <ons-row align="bottom" style="padding: 5px 0px;">
+            <ons-col><strong>Contact Number:</strong></ons-col><ons-col>{{ContactNumber}}</ons-col>
+        </ons-row>
+        <ons-row align="bottom" style="padding: 5px 0px;">
+            <ons-col><strong>Address 1:</strong></ons-col><ons-col>{{Addressline1}}</ons-col>
+        </ons-row>
+        <ons-row align="bottom" style="padding: 5px 0px;">
+            <ons-col><strong>Address 2:</strong></ons-col><ons-col>{{Addressline2}}</ons-col>
+        </ons-row>
+        <ons-row align="bottom" style="padding: 5px 0px;">
+            <ons-col><strong>Address 3:</strong></ons-col><ons-col>{{Addressline3}}</ons-col>
+        </ons-row>
+        <ons-row align="bottom" style="padding: 5px 0px;">
+            <ons-col><strong>Suburb:</strong></ons-col><ons-col>{{Suburb}}</ons-col>
+        </ons-row>
+        <ons-row align="bottom" style="padding: 5px 0px;">
+            <ons-col><strong>City:</strong></ons-col><ons-col>{{City}}</ons-col>
+        </ons-row>
+        <ons-row align="bottom" style="padding: 5px 0px;">
+            <ons-col><strong>Province:</strong></ons-col><ons-col>{{Province}}</ons-col>
+        </ons-row>
+        <ons-row align="bottom" style="padding: 5px 0px;">
+            <ons-col><strong>Postal Code:</strong></ons-col><ons-col>{{postalCode}}</ons-col>
+        </ons-row>
+    </div>
+    <div style="font-size: 12px; margin: 20px 40px 20px 40px; width: inherit;">
+        <ons-button modifier="large" class="reg-button" ng-click="SetupUpdate()"><img src="images/icons/profile.png"/> Update Details</ons-button>   
+        <br>
+        <ons-button modifier="large" class="reg-button" onclick="myNavigator.pushPage('views/users/passwordupdate.html', { animation : 'slide' } )"><img src="images/icons/password.png"/> Change Password</ons-button>   
+    </div>
+</ons-page>

@@ -1,0 +1,73 @@
+<ons-page>
+    <ons-toolbar>
+        <div class="left"><ons-back-button>Back</ons-back-button></div>
+        <div class="center">Update Profile</div>
+        <div class="right">
+            <ons-toolbar-button ng-click="menu.toggleMenu()">
+                <ons-icon icon="ion-navicon" size="38px" fixed-width="false"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+    <div class="topBanner" style="text-align: center;">
+        <img src="images/app_header.png" class="otherPageBanImg" />
+    </div>
+    <div style="padding: 0 20px;">
+        <h4 style="padding-left: 20px;">Update Profile</h4>
+        <div class="formarea">
+            
+            <div class="form-row">
+                <input type="text" class="text-input--underbar width-full" ng-model="data.up_Email" placeholder="Email Address">
+            </div>
+
+            <div class="form-row">
+                <input type="text" class="text-input--underbar width-full" ng-model="data.up_CNumber" placeholder="Contact Number">
+            </div>
+            
+            <div class="form-row">
+                <input type="text" class="text-input--underbar width-full" ng-model="data.up_Addline1" placeholder="Address line 1">
+            </div>
+            
+            <div class="form-row">
+                <input type="text" class="text-input--underbar width-full" ng-model="data.up_Addline2" placeholder="Address line 2 (optional)">
+            </div>
+            
+            <div class="form-row">
+                <input type="text" class="text-input--underbar width-full" ng-model="data.up_Addline3" placeholder="Address line 3 (optional)">
+            </div>
+
+            <div class="form-row">
+                <input type="text" class="text-input--underbar width-full" ng-model="data.up_pCode" placeholder="Post Code">
+            </div>
+            
+            <div class="form-row">
+                <input type="text" class="text-input--underbar width-full" ng-model="data.up_Sub" placeholder="Suburb">
+            </div>
+            
+            <div class="form-row">
+                <select ng-model="data.up_Prov" ng-change="getDistCode()" style="width:100%;">
+                    <option value="">Select your Province</option>
+                    <option value="EASC">Eastern Cape</option>
+                    <option value="FREE">Free State</option>
+                    <option value="GAUT">Gauteng</option>
+                    <option value="KZNT">KwaZulu-Natal</option>
+                    <option value="NPRO">Limpopo</option>
+                    <option value="MPUM">Mpumalanga</option>
+                    <option value="NWES">North West</option>
+                    <option value="NCAP">Northern Cape</option>
+                    <option value="WESC">Western Cape</option>
+                    <option value="OTHR">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-row">
+                <select ng-model="data.up_City" ng-options="regCity.distname for regCity in regCityDD track by regCity.distcode" style="width:100%;">
+                    <option value="">Select a City</option>
+                </select>
+            </div>
+            
+            <div class="vspc form-row" style="margin-bottom: 20px;">
+                <ons-button modifier="large" class="reg-button" ng-click="updateMe()"><img src="images/icons/update.png"/> Update</ons-button>
+            </div>
+        </div>
+    </div>
+</ons-page>
